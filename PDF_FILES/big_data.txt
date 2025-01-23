@@ -1,0 +1,13 @@
+#Load Files into RDD: upload a file to the Databricks workspace
+#API Application Programming Interface
+
+#Transformation API: Operations like map(), filter(), or flatMap() that define how data is transformed into new RDDs
+#Action API:collect(), count(), or saveAsTextFile() that trigger computation and return a result.
+
+#SC Spark Context:entry point to any Spark functionality. It handles communication between your application and the Spark cluster. In Databricks, the sc is preconfigured,, so you don’t need to create it explicitly.
+ 
+#Text File:method to load them into an RDD, helps to upload file into variable with the help of sc.textFile
+
+
+rdd1=sc.textFile("dbfs:/FileStore/social_media_comments.csv")
+rdd1.collect()
